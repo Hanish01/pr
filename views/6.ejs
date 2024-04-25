@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Biryani</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+    <style>
+        *
+        {
+            font-family: montserrat;
+        }
+        #t2
+        {
+            margin-left: 51%;
+            font-size: 18px;
+        }
+        #t1
+        {
+            color: #DB6310;    
+            margin-right: -8px;
+            transition: 1s;
+            border-bottom: 1px solid transparent;
+        }
+        img
+        {
+            border-radius: 25px;
+            position: absolute;
+            right: 0;
+            margin-right: 17px;
+            padding-left: 10px;
+            transition: 0.56s;
+        }
+        #cal
+        {
+            position: absolute;
+            right: 0;
+            padding-right: 150px;
+            margin-bottom: 50px;
+            
+        }
+        #title
+        {
+            margin: 0px;
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 35px;
+        }
+        #pic
+        {
+            padding-top: 20px;
+        }
+        #line
+        {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin: 20px 0;
+        }
+        #recipe
+        {
+            border: 2px solid black;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+        img:hover{
+            width :560px;
+            height:310px;
+        }
+        #t1:hover
+        {
+            border-bottom: 1px solid #DB6310;
+        }
+    </style>
+    <script>
+    $(document).ready(function()
+    {
+        $("#headtext").css("text-align","left");
+        $("#headtext").css("font-family","montserrat");
+        $("#headtext").css("color","black");
+        $("#head").css("background-color","white");
+    });
+    </script>
+</head>
+<body>
+    <div id="head" style=" border: 1px solid black; padding: 0px ; margin: 0px;">
+        <p id="headtext" style="font-size: 30px; margin: 0px; padding-left: 10px; padding: 15px;"> <span id="t1">College Cal
+        </span>orie Cookbook  <span id="t2">Hello <%= user.charAt(0).toUpperCase() +user.slice(1) %></span>  <a href="/users/Logout" style="padding-left: 30px; font-size: 25px;">Logout</a>
+    </div></p>
+    </div>
+    
+    <div id="recipe">
+        <p id="title" style="padding-top: 20px;">
+            <span id="t1" style="padding-right: 7px;">Chicken</span> Biryani
+        </p>
+        <div id="pic" style="padding: 0%;">
+            <img src="/images/9.png" width ="550" height="300">
+        </div>
+        <div  style="width: 55%; padding-left: 20px;">
+            <p>
+                Indulge in the rich and aromatic flavors of Chicken Biryani(our emotion)with this classic recipe. Made with tender chicken, fragrant rice, and a blend of spices, this dish is sure to impress your taste buds.
+            </p>
+            <div id="line"></div>
+            <br>
+            <span id="t1" style="font-size: 23px;">
+            Required Ingredients:
+        </span>
+        <p>
+            1. Chicken (bone-in, skinless)<br>2. Basmati Rice<br>3. Yogurt<br>4. Onions<br>5. Tomatoes<br>6. Garlic<br>7. Ginger<br>8. Green Chilies<br>9. Spices (Cumin, Coriander, Turmeric, Garam Masala)<br>10. Mint Leaves<br>11. Cilantro<br>12. Cooking Oil<br>13. Salt
+        </p>
+        </div>
+        <div style="padding-left: 20px;">
+        <span id="t1" style="font-size: 23px;">
+            Instructions:
+        </span>
+        <p>
+            <span id="t1" style="font-size: 18px;">Time to cook: (for real now)</span><br>
+            <div id="cal">
+                <p id="t1" style="font-size: 23px;">
+                    Calories:<br></p>
+                    <p style="font-size: 28px;">
+                    Approx, 450-500
+                </p>
+                </div>
+            1. Marinate the chicken with yogurt, ginger-garlic paste, green chilies, and spices. <br>Let it sit for at least 30 minutes.<br>
+            2. Heat oil in a large pan or pot. Add sliced onions and cook until golden brown.<br> Remove half of the onions and set aside for garnishing.<br>
+            3. Add chopped tomatoes, mint leaves, and cilantro to the remaining onions in the pan.<br> Cook until tomatoes are soft.<br>
+            4. Add the marinated chicken to the pan and cook until it's browned on all sides.<br>
+           
+            5. Rinse and soak basmati rice for 30 minutes. Drain and add the rice to the pot with the chicken.<br>
+            6. Add water, salt, and garam masala. Cover and cook until the rice is tender and the chicken is fully cooked.<br>
+            7. Garnish with the reserved fried onions and serve hot with raita or salad.<br>
+        </p>
+        </div>
+        <p>
+            Check this for reference:<a href="https://youtu.be/-cLDrBc4Of4?si=NOcEdHJ1v8XGrzpH">
+                Chicken Biryani
+            </a>
+        </p>
+        
+    </div>
+    
+</body>
+</html>

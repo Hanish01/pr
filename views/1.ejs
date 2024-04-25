@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Sauce pasta</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+
+    <style>
+        *
+        {
+            font-family: montserrat;
+        }
+    #t2
+    {
+        margin-left: 51%;
+       
+        font-size: 18px ;
+    }
+    #t1
+       {
+        color: #DB6310;    
+        margin-right: -8px;
+        transition: 1s;
+        border-bottom: 1px solid transparent;
+        
+    }
+    img
+    {
+        border-radius: 25px;
+        position: absolute;
+        right: 0;
+        margin-right: 17px;
+        padding-left: 10px;
+        transition: 0.56s;
+
+        
+    }
+    #cal
+    {
+        position: absolute;
+        right: 0;
+        padding-right: 150px;
+    }
+    #title
+    {
+        margin: 0px;
+        margin-top: 10px;
+        padding-left: 20px;
+        font-size: 35px;
+       
+
+    }
+    #pic
+    {
+        padding-top: 20px;
+        
+    }
+    #line
+    {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        margin: 20px 0;
+    }
+    #recipe
+    {
+        border: 2px solid black;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+    img:hover{
+        width :560px;
+        height:310px;
+
+    }
+    #t1:hover
+    {
+        border-bottom: 1px solid #DB6310;
+    }
+    </style>
+    <script>
+          $(document).ready(function()
+    {
+        $("#headtext").css("text-align","left");
+            $("#headtext").css("font-family","montserrat");
+            $("#headtext").css("color","black");
+      
+            $("#head").css("background-color","white");
+            
+            
+    });
+        
+    </script>
+</head>
+<body>
+
+
+    <div id="head" style=" border: 1px solid black; padding: 0px ; margin: 0px;">
+        <p id="headtext" style="font-size: 30px; margin: 0px; padding-left: 10px; padding: 15px;"> <span id="t1">College Cal
+        </span>orie Cookbook  <span id="t2">Hello <%= user.charAt(0).toUpperCase() +user.slice(1) %></span>  <a href="/users/Logout" style="padding-left: 30px; font-size: 25px;">Logout</a>
+    </div></p>
+    </div>
+    
+    <div id="recipe">
+
+        <p id="title" style="padding-top: 20px;">
+            <span id="t1" style="padding-right: 7px;">Red Sauce </span> Pasta
+
+        </p>
+        <div id="pic" style="padding: 0%;">
+            <img src="/images/4.png" width ="550" height="300">
+
+        </div>
+        <div  style="width: 55%; padding-left: 20px;">
+  
+            <p>
+                Welcome to our unique take on the classic red sauce pasta! If you're looking for a quick and easy way to whip up a delicious meal without using traditional pots and pans, you're in the right place. Our recipe for red sauce pasta cooked in a kettle is a game-changer.
+            </p>
+            <div id="line"></div>
+
+            
+            <br>
+            <span id="t1" style="font-size: 23px;">
+            Required Things:
+        </span>
+        
+       
+
+        <p>
+            1. Kettle<br>2.Pasta <br>3. Pasta Sauce<br> 4. Butter(Optional)<br>5. Capsicum <br>6.Ketchup or Tomato Sauce<br>7.Salt and Pepper
+
+        </p>
+        </div>
+        <div style="padding-left: 20px;">
+        
+
+        <span id="t1" style="font-size: 23px;">
+            Instructions:
+        </span>
+        <p>
+            <span id="t1" style="font-size: 18px;">Time to cook(But not really)</span><br>
+
+            1. &nbsp;Get your kettle which is not turned on, add pasta into it.<br>
+            2. &nbsp;Add 1 Cup of Water to it<br>
+            3.&nbsp; Along with that, add 50 gms of Pasta Sauce<br>
+
+
+            <div id="cal">
+
+            <p id="t1" style="font-size: 28px;">
+                Calories:<br></p>
+                <p style="font-size: 28px;">
+                Appox, 370
+            </p>
+
+
+            </div>
+            4. &nbsp;If you can find Butter, add butter to it<br>
+            5. &nbsp;Add Salt and Pepper to it. If you dont have salt get it from your mess.<br>
+            6. &nbsp;Now, Mix it well.Close it and turn on that Kettle. Boil it for like 2-3 minutes and stir Occasionaly.<br>
+            7. &nbsp;Turn the kettle off.Keep it aside for 3 minutes.<br>
+            8. &nbsp;Meanwhile, if you have Capsicum, cut them into bite size pieces.<br>
+            9. &nbsp;Now go and get some oregano, chilli flakes,Ketchup (if you have Tomato Sauce add it instead) from some stalls near you.<br>
+            10. &nbsp;Add that Capsicum(if you have Capsicum) and mix it well and turn on the kettle for a few minutes and let it cook.<br>
+            11. &nbsp;No more Steps, add it into a bowl. Enjoy that.
+            
+        </p>
+        <p>
+            Any troubles?? click this link to redirect to the video that I referenced:  <a href="https://youtu.be/1h8L97z8tpk?si=_5xKqgrbS2PhFiHM&t=19">Red Sause Pasta</a>
+            
+        </p>
+        </div>
+   
+    </div>
+</body>
+</html>

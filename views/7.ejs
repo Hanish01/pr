@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter Chicken</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+    <style>
+        *
+        {
+            font-family: montserrat;
+        }
+        #t2
+        {
+            margin-left: 51%;
+            font-size: 18px;
+        }
+        #t1
+        {
+            color: #DB6310;    
+            margin-right: -8px;
+            transition: 1s;
+            border-bottom: 1px solid transparent;
+        }
+        img
+        {
+            border-radius: 25px;
+            position: absolute;
+            right: 0;
+            margin-right: 17px;
+            padding-left: 10px;
+            transition: 0.56s;
+        }
+        #cal
+        {
+            position: absolute;
+            right: 0;
+            padding-right: 150px;
+            padding-left: 10px;
+            
+        }
+        #title
+        {
+            margin: 0px;
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 35px;
+        }
+        #pic
+        {
+            padding-top: 20px;
+        }
+        #line
+        {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin: 20px 0;
+        }
+        #recipe
+        {
+            border: 2px solid black;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+        img:hover{
+            width :560px;
+            height:310px;
+        }
+        #t1:hover
+        {
+            border-bottom: 1px solid #DB6310;
+        }
+    </style>
+    <script>
+    $(document).ready(function()
+    {
+        $("#headtext").css("text-align","left");
+        $("#headtext").css("font-family","montserrat");
+        $("#headtext").css("color","black");
+        $("#head").css("background-color","white");
+    });
+    </script>
+</head>
+<body>
+    <div id="head" style=" border: 1px solid black; padding: 0px ; margin: 0px;">
+        <p id="headtext" style="font-size: 30px; margin: 0px; padding-left: 10px; padding: 15px;"> <span id="t1">College Cal
+        </span>orie Cookbook  <span id="t2">Hello <%= user.charAt(0).toUpperCase() +user.slice(1) %></span>  <a href="/users/Logout" style="padding-left: 30px; font-size: 25px;">Logout</a>
+    </div></p>
+    </div>
+    
+    <div id="recipe">
+        <p id="title" style="padding-top: 20px;">
+            <span id="t1" style="padding-right: 7px;">Butter</span> Chicken
+        </p>
+        <div id="pic" style="padding: 0%;">
+            <img src="/images/10.png" width ="550" height="300">
+        </div>
+        <div  style="width: 55%; padding-left: 20px;">
+            <p>
+                Indulge in the creamy and flavorful Butter Chicken with this classic recipe. Tender chicken cooked in a rich tomato and butter sauce, this dish is a true delight for your taste buds.
+            </p>
+            <div id="line"></div>
+            <br>
+            <span id="t1" style="font-size: 23px;">
+            Required Ingredients:
+        </span>
+        <p>
+            1. Chicken (boneless, skinless)<br>2. Yogurt<br>3. Lemon Juice<br>4. Ginger-Garlic Paste<br>5. Butter<br>6. Tomatoes<br>7. Onion<br>8. Cashew Nuts<br>9. Cream<br>10. Spices (Cumin, Coriander, Garam Masala)<br>11. Salt
+        </p>
+        </div>
+        <div style="padding-left: 20px;">
+        <span id="t1" style="font-size: 23px;">
+            Instructions:
+        </span>
+        <p>
+            <span id="t1" style="font-size: 18px;">Time to cook:(For real)</span><br>
+            1. Marinate the chicken with yogurt, lemon juice, ginger-garlic paste, and spices.<br> Let it sit for at least 30 minutes.<br>
+            2. Heat butter in a pan and sauté chopped onions until golden brown.<br>
+            <div id="cal">
+                <p id="t1" style="font-size: 23px;">
+                    Calories:<br></p>
+                    <p style="font-size: 28px;">
+                    Approx, 550-600 per serving
+                </p>
+                </div>
+            3. Add chopped tomatoes and cashew nuts to the pan. Cook until tomatoes are soft.<br>
+            4. Blend the mixture into a smooth paste.<br>
+            5. In the same pan, add more butter and cook the marinated chicken <br>until it's browned on all sides.<br>
+            6. Pour the blended tomato-cashew paste into the pan and simmer for 10-15 minutes.<br>
+            7. Add cream and simmer for another 5 minutes.<br>
+            8. Garnish with fresh cream and serve hot with naan or rice.<br>
+        </p>
+        </div>
+        <p>
+            Check this for reference:<a href="https://youtu.be/mrDJ2K3JXsA?si=LkdKFUuCI_7YJD2i">
+                Butter Chicken
+            </a>
+        </p>
+
+        
+    </div>
+    
+</body>
+</html>

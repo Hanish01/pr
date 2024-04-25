@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+   
+    <style>
+        *
+        {
+            font-family: Teko;
+            font-size: large;
+            text-align: center;
+        }
+        a:hover
+        {
+            color:#008b8b;
+            transition: 0.4s;
+        }
+        
+        a{
+            color: black;
+            transition: 0.4s;
+        }
+    </style>
+
+    
+    <title>Login</title>
+
+    <script>
+
+        $(document).ready(function()
+    {
+        $("#headtext").css("text-align","center");
+            $("#headtext").css("font-family","Teko");
+            $("#headtext").css("color","white");
+            $("#headtext").css("border", "1px solid black"); 
+            $("#head").css("background-color","white");
+            $("#head").css("background-image", "linear-gradient(to left,#ffa500, #a4f4f9)");
+    });
+
+   
+    </script>
+</head>
+<body>
+
+    <div id="head">
+        <p id="headtext" style="font-size: 50px;"> College Calorie Cookbook</p>
+    </div>
+
+    <div >
+    <h1 style="text-decoration:underline ;">Login</h1>
+
+    <% if (messages.success && messages.success.length > 0) { %>
+        <ul>
+            <li><%= messages.success %></li>
+        </ul>
+    <% } %>
+
+    <% if (messages.error && messages.error.length > 0) { %>
+        <ul>
+            <li><%= messages.error %></li>
+        </ul>
+    <% } %>
+ 
+
+    <form action="/users/login" method="post">     
+        <div >
+            <input type="email" id="email" name="email" placeholder="Email" required style="text-align: left;">
+        </div>
+
+        <div>
+            <input type="password" id="password" name="password" placeholder="Password" required style="text-align: left;">
+        </div>
+       
+        <div>
+            <input type="submit" value="Login" style="font-size: 18px;">
+        </div>
+        <a href="/users/register" >Register here</a>
+    </form>
+    </div>
+
+</body>
+</html>

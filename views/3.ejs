@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Pulao</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+
+    <style>
+        *
+        {
+            font-family: montserrat;
+        }
+    #t2
+    {
+        margin-left: 51%;
+       
+        font-size: 18px ;
+    }
+    #t1
+       {
+        color: #DB6310;    
+        margin-right: -8px;
+        transition: 1s;
+        border-bottom: 1px solid transparent;
+        
+    }
+    img
+    {
+        border-radius: 25px;
+        position: absolute;
+        right: 0;
+        margin-right: 17px;
+        padding-left: 10px;
+        transition: 0.56s;
+
+        
+    }
+    #cal
+    {
+        position: absolute;
+        right: 0;
+        padding-right: 150px;
+    }
+    #title
+    {
+        margin: 0px;
+        margin-top: 10px;
+        padding-left: 20px;
+        font-size: 35px;
+       
+
+    }
+    #pic
+    {
+        padding-top: 20px;
+        
+    }
+    #line
+    {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        margin: 20px 0;
+    }
+    #recipe
+    {
+        border: 2px solid black;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+    img:hover{
+        width :560px;
+        height:310px;
+
+    }
+    #t1:hover
+    {
+        border-bottom: 1px solid #DB6310;
+    }
+    </style>
+    <script>
+          $(document).ready(function()
+    {
+        $("#headtext").css("text-align","left");
+            $("#headtext").css("font-family","montserrat");
+            $("#headtext").css("color","black");
+      
+            $("#head").css("background-color","white");
+            
+            
+    });
+        
+    </script>
+</head>
+<body>
+
+
+    <div id="head" style=" border: 1px solid black; padding: 0px ; margin: 0px;">
+        <p id="headtext" style="font-size: 30px; margin: 0px; padding-left: 10px; padding: 15px;"> <span id="t1">College Cal
+        </span>orie Cookbook  <span id="t2">Hello <%= user.charAt(0).toUpperCase() +user.slice(1) %></span>  <a href="/users/Logout" style="padding-left: 30px; font-size: 25px;">Logout</a>
+    </div></p>
+    </div>
+    
+    <div id="recipe">
+
+        <p id="title" style="padding-top: 20px;">
+            <span id="t1" style="padding-right: 7px;">Veg</span> Pulao
+
+        </p>
+        <div id="pic" style="padding: 0%;">
+            <img src="/images/6.jpg" width ="550" height="300">
+
+        </div>
+        <div  style="width: 55%; padding-left: 20px;">
+  
+            <p>
+                Experience the delightful flavors of a classic Indian dish right in your own kitchen with our easy-to-follow veg pulao recipe! Using just a kettle, you can whip up this aromatic and wholesome meal in no time.
+            </p>
+            <div id="line"></div>
+
+            
+            <br>
+            <span id="t1" style="font-size: 23px;">
+            Required Things:
+        </span>
+        
+       
+
+        <p>
+            1. Kettle<br>2.Oil<br>3.Cumin Seeds<br> 4. Rice<br>5. Soya Nuggets<br>6.Green Peas<br>7.Ginger garlic Paste<br>8.Salt<br>9.Maggie Masala(our Saviour)<br>10.Garam Masala(optional)
+
+        </p>
+        </div>
+        <div style="padding-left: 20px;">
+        
+
+        <span id="t1" style="font-size: 23px;">
+            Instructions:
+        </span>
+        <p>
+            <span id="t1" style="font-size: 18px;">Time to cook(But not really)</span><br>
+
+            1. &nbsp;Add oil to the Kettle which is not on, so that the base of it is barely covered by it.<br>
+            2. &nbsp;Add 1 tsp of cumin seeds into it and Turn the kettle on,wait until either the kettle Switches off on its own or wait for a minute <br>
+            3.&nbsp; Wash the rice and soak it in water for a bit and add it to the kettle.<br>
+
+
+            <div id="cal">
+
+            <p id="t1" style="font-size: 28px;">
+                Calories:<br></p>
+                <p style="font-size: 28px;">
+                Appox, 450-520
+            </p>
+
+
+            </div>
+            4. &nbsp;Time for math, Add twice the amount of water into the kettle comaparing with the amount of rice you have poured in<br>
+            5. &nbsp;Add Soya chunks and green peas into it.<br>
+            6. &nbsp;Add Ginger garlic paste into it,if you have chille powder add a teaspoon of it<br>
+            7. &nbsp;Now add Magic Masala powder which you can get from you stalls,to it<br>
+            8. &nbsp;Add Salt to it.<br>
+            9. &nbsp;If you have garam Masala add it.Now your task begins, <br>you have to cook until rice absorbs the water and gets cooked.For that you might need to turn kettle again and again<br>
+            10. &nbsp;No more steps , Eat IT!!
+            
+        </p>
+        <p>
+            Any troubles?? click this link to redirect to the video that I referenced:  <a href="https://youtu.be/1h8L97z8tpk?si=_X3HJhZUFqYOYNNa&t=651">Veg Pulao</a>
+            
+        </p>
+        </div>
+   
+    </div>
+</body>
+</html>

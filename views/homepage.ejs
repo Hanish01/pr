@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <style>
+       body
+       {
+        background-color: rgb(255, 255, 255);
+        font-family: montserrat;
+   
+       }
+       #t1
+       {
+        color: #DB6310;    
+        margin-right: -8px;
+        transition: 1s;
+        border-bottom: 1px solid transparent;
+        
+    }
+    
+    #Happy
+    {
+        display: block;
+
+        text-align: center;
+        margin-top: 20px;
+        font-size: 30px;
+        transition:  0.6s ;
+        padding-top: 20px;
+      
+    }
+    #t2
+    {
+        margin-left: 51%;
+       
+        font-size: 18px ;
+    }
+    #welcometxt
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        margin-left: 15%;
+        transform: 0.4s;
+        
+    }
+    a:hover
+    {
+        color:#008b8b;
+        transition: 0.4s;
+    }
+    img{
+        padding:12px;
+        transition: 0.6s;
+    }
+    
+        
+    a{
+         color: black;
+         transition: 0.4s;
+     }
+    #welcomeheader
+    {
+        display: block;
+        text-align: center; 
+        font-size: 40px;
+        
+        padding-top: 30px;
+        transition: font-size 0.6s ;
+    
+
+    }
+    #line
+    {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        margin: 20px 0;
+    }
+ #row
+ {
+    height: 250px;
+    width: 100%;
+    border: 1px solid #DB6310;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+ }
+ 
+ #col
+ {
+    height: 220px;
+    width: 220px;
+    float: left;
+   margin: 20px;
+   margin-left: 80px;
+    border: 1px solid black;
+    transition: 0.4s;
+    
+ }
+ 
+ #recipe
+ {
+    text-align: center;
+    transition: font-size 0.6s;
+ }
+ #tail
+ {
+    width: 100%;
+    height: 350px;
+    background-color: #DB6310;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+    #welcomeheader:hover{
+        font-size: 43px;
+    }
+    #Happy:hover{
+        font-size: 23px;
+        color: #DB6310;
+        
+    }
+    #t1:hover{
+        border-bottom: 1px solid #DB6310;
+    }
+    #col:hover{
+        width: 240px;
+        height: 230px;
+    }
+    #col:hover #recipe
+    {
+        font-size: 25px;
+    }
+    #col:hover img{
+        width: 220px;
+        height: 160px;
+    }
+    #t3
+    {
+        color: white;
+        font-weight: 300px;
+        font-size: 23px;
+        transition: 0.6s;
+      
+    }
+    #t3:hover{
+        font-size: 20px;
+        border-bottom: 1px solid black;
+
+    }
+
+    
+    
+       
+    </style>
+
+    <script>
+
+        $(document).ready(function()
+    {
+        $("#headtext").css("text-align","left");
+            $("#headtext").css("font-family","montserrat");
+            $("#headtext").css("color","black");
+      
+            $("#head").css("background-color","white");
+            
+            
+    });
+    function Recipe1()
+    {
+        window.location.href='1';
+    }
+    function Recipe2()
+    {
+        window.location.href='2';
+    }
+    function Recipe3()
+    {
+        window.location.href='3';
+    }
+    function Recipe4()
+    {
+        window.location.href='4';
+    }
+    function Recipe5()
+    {
+        window.location.href='5';
+    }
+    function Recipe6()
+    {
+        window.location.href='6';
+    }
+   function Recipe7()
+   {
+    window.location.href='7';
+   }
+  
+  
+    </script>
+</head>
+<body>
+
+    <div id="head" style=" border: 1px solid black; padding: 0px ; margin: 0px;">
+        <p id="headtext" style="font-size: 30px; margin: 0px; padding-left: 10px; padding: 15px;"> <span id="t1">College Cal
+        </span>orie Cookbook   <span id="t2">Hello <%= user.charAt(0).toUpperCase() +user.slice(1) %></span>  <a href="/users/Logout" style="padding-left: 30px; font-size: 25px;">Logout</a></p>
+    </div>
+
+
+
+    <div id="welcome">
+    <h2 id="welcomeheader"><span id="t1"  style="padding-right: 5px;">Welcome
+    </span> to College Calorie Cookbook</h2>
+
+    
+    <div id="welcometxt">
+        
+        <p>
+            
+            
+            Whether you're a busy hosteller looking for quick and delicious meals or a home cook seeking easy-to-make recipes, you've come to the right place. Our collection features a variety of dishes tailored to fit your lifestyle and culinary skills.<br><br>
+
+<span id="t1" style="padding-right: 8px;">For Hostellers:</span><br>
+Living away from home can be challenging, but mealtime doesn't have to be. Explore our selection of dorm-friendly recipes designed to be cooked with minimal ingredients and equipment.<br> From microwave mug meals to one-pot wonders and meals in kettle, we've got you covered with tasty options that won't break the bank or your schedule.
+<br>
+<br>
+
+<span id="t1" style="padding-right: 8px;">For Everyone:</span><br>
+Cooking shouldn't be complicated. Our recipes are perfect for anyone looking to whip up satisfying meals without spending hours in the kitchen. From simple pasta dishes to flavorful stir-fries, discover a range of recipes that prioritize ease and flavor. With our step-by-step instructions and helpful tips, you'll be serving up impressive meals in no time.<br>
+
+Browse our collection and get inspired to create delicious dishes that are as enjoyable to make as they are to eat.<br> <span id="Happy"  >Happy Cooking and Cleaning!</span>
+        </p>
+    </div>
+
+    </div>
+
+
+    <div id="line"></div>
+    <h2>For Hostellers</h2>
+
+    <div id="row">
+        
+
+    
+    <div id="col" onclick="Recipe1()">
+        <img src="/images/4.png" width="200px" height="150px">
+        <div id="recipe">
+            Red Sauce Pasta
+
+        </div>
+
+    </div>
+
+      
+    <div id="col" onclick="Recipe2()">
+        <img src="/images/5.png" width="200px" height="150px">
+        <div id="recipe">
+            Masala Oats
+
+        </div>
+
+    </div>
+      
+    <div id="col" onclick="Recipe3()">
+        <img src="/images/6.jpg" width="200px" height="150px">
+        <div id="recipe">
+            Veg Pulao
+
+        </div>
+
+    </div>
+  
+    </div>
+    <div id="line"></div>
+    <h2>Other Recipies</h2>
+
+    <div id="row">
+        
+
+    
+    <div id="col">
+        <img src="/images/7.png"  onclick="Recipe4()" width="200px" height="150px">
+        <div id="recipe">
+            Egg fried Rice
+
+        </div>
+
+    </div>
+
+      
+    <div id="col">
+        <img src="/images/8.png" onclick="Recipe5()"  width="200px" height="150px">
+        <div id="recipe">
+            Omelette
+
+        </div>
+
+    </div>
+      
+    <div id="col">
+        <img src="/images/9.png" onclick="Recipe6()" width="200px" height="150px">
+        <div id="recipe">
+            Chicken Biryani
+
+        </div>
+
+    </div>
+      
+    <div id="col">
+        <img src="/images/10.png" onclick="Recipe7()" width="200px" height="150px">
+        <div id="recipe">
+            Butter Chicken
+
+        </div>
+
+    </div>
+    
+    
+
+
+    </div>
+
+    <div id="line"></div>
+
+    <div id="tail">
+
+        <p> Done by:
+
+            <br>
+            <span id="t3">
+            K.Hanish Vardhan</span>
+
+            
+<br>
+You can contact me at <span id="t3">kottehanish@gmail.com</span>
+        </p>
+        <div style="padding-left: 250px; margin: 0px; margin-left: 100px; padding: 0px;" >
+            <h2 id="t3">
+                Thank you for checking My Page.<br>
+            </h2>
+            
+        </div>
+
+
+       
+
+    </div>
+
+</div>
+
+
+</body>
+</html> 

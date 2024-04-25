@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Fried Rice</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+    <style>
+        *
+        {
+            font-family: montserrat;
+        }
+        #t2
+        {
+            margin-left: 51%;
+            font-size: 18px;
+        }
+        #t1
+        {
+            color: #DB6310;    
+            margin-right: -8px;
+            transition: 1s;
+            border-bottom: 1px solid transparent;
+        }
+        img
+        {
+            border-radius: 25px;
+            position: absolute;
+            right: 0;
+            margin-right: 17px;
+            padding-left: 10px;
+            transition: 0.56s;
+        }
+        #cal
+        {
+            position: absolute;
+            right: 0;
+            padding-right: 150px;
+        }
+        #title
+        {
+            margin: 0px;
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 35px;
+        }
+        #pic
+        {
+            padding-top: 20px;
+        }
+        #line
+        {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin: 20px 0;
+        }
+        #recipe
+        {
+            border: 2px solid black;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+        
+        img:hover{
+            width :560px;
+            height:310px;
+        }
+        #t1:hover
+        {
+            border-bottom: 1px solid #DB6310;
+        }
+    </style>
+    <script>
+    $(document).ready(function()
+    {
+        $("#headtext").css("text-align","left");
+        $("#headtext").css("font-family","montserrat");
+        $("#headtext").css("color","black");
+        $("#head").css("background-color","white");
+    });
+    </script>
+</head>
+<body>
+    <div id="head" style=" border: 1px solid black; padding: 0px ; margin: 0px;">
+        <p id="headtext" style="font-size: 30px; margin: 0px; padding-left: 10px; padding: 15px;"> <span id="t1">College Cal
+        </span>orie Cookbook  <span id="t2">Hello <%= user.charAt(0).toUpperCase() +user.slice(1) %></span>  <a href="/users/Logout" style="padding-left: 30px; font-size: 25px;">Logout</a>
+    </div></p>
+    </div>
+    
+    <div id="recipe">
+        <p id="title" style="padding-top: 20px;">
+            <span id="t1" style="padding-right: 7px;">Egg</span> Fried Rice
+        </p>
+        <div id="pic" style="padding: 0%;">
+            <img src="/images/7.png" width ="550" height="300">
+        </div>
+        <div  style="width: 55%; padding-left: 20px;">
+            <p>
+                Enjoy the classic flavors of Egg Fried Rice with this simple recipe that's perfect for a quick and satisfying meal. Made with fluffy rice, scrambled eggs, and a medley of vegetables, this dish is sure to please your taste buds.
+            </p>
+            <div id="line"></div>
+            <br>
+            <span id="t1" style="font-size: 23px;">
+            Required Ingredients:
+        </span>
+        <p>
+            1. Rice<br>2. Eggs<br>3. Mixed Vegetables (such as carrots, peas, bell peppers)<br> 4. Onion<br>5. Garlic<br>6. Soy Sauce<br>7. Cooking Oil<br>8. Salt<br>9. Pepper<br>10. Optional: Spring Onions, Sesame Oil
+        </p>
+        </div>
+        <div style="padding-left: 20px;">
+        <span id="t1" style="font-size: 23px;">
+            Instructions:
+        </span>
+        <p>
+            <span id="t1" style="font-size: 18px;">Time to Cook (for real now)</span><br>
+            1. Heat some cooking oil in a pan or wok.<br>
+            2. Add finely chopped onions and minced garlic to the pan. Sauté until they turn translucent.<br>
+            3. Crack the eggs into the pan and scramble them until cooked through.<br>
+
+            <div id="cal">
+
+                <p id="t1" style="font-size: 28px;">
+                    Calories:<br></p>
+                    <p style="font-size: 28px;">
+                    Appox, 450-500
+                </p>
+                </div>
+                
+            4. Add mixed vegetables to the pan and stir-fry until they are tender.<br>
+            5. Add A day old or cooked rice to the pan along with soy sauce, salt, and pepper. Mix well to combine.<br>
+            6. Optional: Add chopped spring onions and a drizzle of soy sauce for extra flavor.<br>
+            7. Stir-fry everything together until the rice is heated through and evenly coated with the sauce.<br>
+            8. No more steps,Egg Fried Rice is ready!<br>
+        </p>
+        <p>
+            Check this for reference:<a href="https://youtu.be/SGBP3sG3a9Y?si=4M1jZWgvHzJu-Bbv">
+                Egg Fried Rice
+            </a>
+        </p>
+        </div>
+        </div>
+</body>
+</html>
