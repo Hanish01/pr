@@ -161,46 +161,42 @@ app.post('/users/register', async (req,res)=>
     else{
         let hashpassword= await bcrypt.hash(password,10);
         console.log(hashpassword);
-
-
         pool.query(
-            `select * from projects
-            where email = $1`,[email], (err, results)=>{ //calback fun
-                    if(err)
-                    {
+    `SELECT * FROM projects WHERE email = $1`,
+    [email],
+    (err, queryResults) => {
+        if (err) {
+            throw err;
+        }
+
+        console.log(queryResults.rows);
+
+        if (queryResults.rows.length > 0) {
+            errors.push({ message: "Email already registered" });
+            res.render('register', { errors });
+        } else {
+            // Email not registered in the database, proceed with registration
+            pool.query(
+                `INSERT INTO projects (name, email, password)
+                VALUES ($1, $2, $3)
+                RETURNING id, password`,
+                [name, email, hashpassword],
+                (err, insertionResults) => {
+                    if (err) {
                         throw err;
                     }
-                    
-
-                    console.log(results.rows);
-
-                    if(results.rows.length>0)
-                    {
-                        errors.push({message: "email already registred"});
-                        res.render('register',{errors});
-                    }
-                    else{
-                        //not there in our database
-                        pool.query(
-                            `insert into projects (name,email,password)
-                            values ($1,$2,$3)
-                            Returning id,password`,[name,email,hashpassword],
-                            (err,results)=>
-                            {
-                                if(err)
-                                {
-                                    throw err;
-                                }
-                                console.log(results.rows);
-                                req.flash('success',"You have been registered.Now you can login");
-                                res.redirect('/users/login');
-                            }
-                        )
-                    }
-            }
-        )
+                    console.log(insertionResults.rows);
+                    req.flash('success', "You have been registered. Now you can login");
+                    res.redirect('/users/login');
+                }
+            );
+        }
     }
-});
+);
+
+
+
+     
 
 
 app.post('/users/login',passport.authenticate('local',{
