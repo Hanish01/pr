@@ -3,36 +3,27 @@ const { pool } = require('./dbConfig');
 const bcrypt = require('bcrypt');
 
 function initialize(passport) {
-    const authenticateUser = (email, password, done) => {
-        pool.query(
-            `SELECT * FROM projects WHERE email = $1`,
-            [email],
-            (err, res) => {
-                try {
-                    if (err) {
-                        throw err;
-                    }
-
-                    if (res.rows.length > 0) {
-                        const user = res.rows[0];
-                        bcrypt.compare(password, user.password, (err, match) => {
-                            if (err) {
-                                throw err;
-                            }
-                            if (match) {
-                                return done(null, user);
-                            } else {
-                                return done(null, false, { message: "Password is not correct" });
-                            }
-                        });
-                    } else {
-                        return done(null, false, { message: "Email not registered" });
-                    }
-                } catch (error) {
-                    return done(error);
-                }
+    const authenticateUser = async (email, password, done) => {
+        try {
+            const { rows } = await pool.query(
+                `SELECT * FROM projects WHERE email = $1`,
+                [email]
+            );
+            
+            if (rows.length === 0) {
+                return done(null, false, { message: "Email not registered" });
             }
-        );
+
+            const user = rows[0];
+            const match = await bcrypt.compare(password, user.password);
+            if (match) {
+                return done(null, user);
+            } else {
+                return done(null, false, { message: "Password is not correct" });
+            }
+        } catch (error) {
+            return done(error);
+        }
     };
 
     passport.use(new LocalStrategy(
@@ -45,16 +36,16 @@ function initialize(passport) {
 
     passport.serializeUser((user, done) => done(null, user.id));
 
-    passport.deserializeUser((id, done) => {
-        pool.query(`SELECT * FROM projects WHERE id = $1`, [id], (err, res) => {
-            
-                if (err) {
-                    throw err;
-                    }
-            
-                return done(null, res.rows[0]);
-            
-        });
+    passport.deserializeUser(async (id, done) => {
+        try {
+            const { rows } = await pool.query(`SELECT * FROM projects WHERE id = $1`, [id]);
+            if (rows.length === 0) {
+                return done(new Error('User not found'));
+            }
+            return done(null, rows[0]);
+        } catch (error) {
+            return done(error);
+        }
     });
 }
 
